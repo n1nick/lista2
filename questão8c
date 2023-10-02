@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() { 
+  float compra, produto;
+
+  printf("Entre com o valor da compra: \n");
+  scanf("%f", &compra);
+  
+  if (compra < 20.00) {
+    produto = compra * 0.45;
+    printf("O preço do produto é: %.2f", produto);
+  } else {
+    produto = compra * 0.30;
+    printf("O preço do produto é: %.2f", produto);
+    }
+
+  return 0;
+}
