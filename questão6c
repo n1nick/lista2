@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() { 
+  float altura, peso, imc;
+  int sexo;
+
+  printf("Insira sua altura: \n");
+  scanf("%f", &altura);
+  printf("Insira seu peso: \n");
+  scanf("%f", &peso);
+  printf("Insira 1 se for homem e 2 se for mulher: \n");
+  scanf("%d", &sexo);
+
+  imc = peso / (altura * altura);
+  
+  if (sexo == 1) {
+    if (imc < 19.1) {
+      printf("\nVocê está abaixo do peso\n");
+    } else if (imc <= 25.8) {
+      printf("\nVocê está no seu peso normal\n");
+    } else if (imc <= 32.3) {
+      printf("\nVocê está acima do seu peso ideal\n");
+    } else {
+      printf("\nVocê está obeso\n");
+    }
+  } else if (sexo == 2) {
+    if (imc < 20.7) {
+      printf("\nVocê está abaixo do peso\n");
+    } else if (imc <= 26.4) {
+      printf("\nVocê está no seu peso normal\n");
+    } else if (imc <= 31.1) {
+      printf("\nVocê está acima do seu peso ideal\n");
+    } else {
+      printf("\nVocê está obeso\n");
+    }
+  } 
+
+  return 0;
+}
